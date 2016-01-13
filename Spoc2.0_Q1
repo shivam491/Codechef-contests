@@ -1,6 +1,10 @@
 ---
+
+Qs:https://www.codechef.com/SOPC1602/problems/OPC1604
+
 Author:Shivam jain
 Language:C++
+
 ----
 Code:
 #include <bits/stdc++.h>
