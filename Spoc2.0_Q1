@@ -1,0 +1,25 @@
+---
+Author:Shivam jain
+Language:C++
+----
+Code:
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+	long long int i,j,k,l,m,n;
+	cin>>n;
+	long int count=0;
+	while(n!=0)
+	{
+		j=n%2;
+		if(j==1)
+		count++;
+		n/=2;
+	}
+	
+	k=pow(2,count);
+	
+	cout<<k;
+	
+} 
