@@ -1,0 +1,43 @@
+https://www.codechef.com/problems/COINS
+============
+#include <bits/stdc++.h>
+using namespace std;
+ 
+long long int a[1000001]={0};
+	
+ 
+long long int mx(long long int n)
+{
+	if(n>1000000)
+	{
+		return max(n,mx(n/2)+mx(n/3)+mx(n/4));
+	}
+ 
+	else
+	return(max(n,a[n/2]+a[n/3]+a[n/4]));
+	
+}
+ 
+ 
+int main() {
+	long long int t,i,j,k,l,m,n,x,y,z;
+	a[0]=0,a[1]=1,a[2]=2,a[3]=3;
+	for(i=4;i<1000001;i++)
+	{
+		j=max(i,(a[i/2]+a[i/3]+a[i/4]));
+		a[i]=j;
+	}
+	
+	while(cin>>n)
+	{
+		if(n>1000000)
+		{
+			k=mx(n);
+			cout<<k<<"\n";
+			
+		}
+		
+		else
+		cout<<a[n]<<"\n";
+	}
+} 
