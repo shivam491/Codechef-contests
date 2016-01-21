@@ -1,0 +1,25 @@
+
+https://www.codechef.com/AMR15ROL/problems/AMR15A/
+------------------------------
+#include <iostream>
+using namespace std;
+ 
+int main() {
+long long int i,item,even,odd,no;
+cin>>no;
+even=odd=0;
+for(i=0;i<n;i++)
+{
+	cin>>item;
+	if(item%2==0)
+	even++;
+	else
+	odd++;
+	
+}
+if(even>odd)
+cout<<"READY FOR BATTLE\n";
+else
+cout<<"NOT READY\n";
+ 
+} 
