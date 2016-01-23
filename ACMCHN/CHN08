@@ -1,0 +1,68 @@
+https://www.codechef.com/CHN15MOS/problems/CHN08/
+----------
+#include <bits/stdc++.h>
+#define mod 1000000007
+using namespace std;
+ 
+long long int chck(long long int n)
+{
+	if(n<0)
+	{
+		n=mod+n;
+	}
+	return n;
+}
+ 
+int main() {
+	long long int t,i,j,k,l,m,n,a,b,c;
+	cin>>t;
+	while(t--)
+	{
+		cin>>a>>b>>n;
+		c=(b-a)%mod;
+		
+		if((n-1)%6==0)
+		{
+			j=chck(a);
+			cout<<j<<"\n";
+			continue;
+		}
+		
+		if((n-2)%6==0)
+		{
+			j=chck(b);
+			cout<<j<<"\n";
+			continue;
+		}
+		if((n-3)%6==0)
+		{
+			j=chck(c);
+			cout<<j<<"\n";
+			continue;
+		}
+		if((n-4)%6==0)
+		{
+			j=-a;
+			j=chck(j);
+			cout<<j<<"\n";
+			continue;
+		}
+		if((n-5)%6==0)
+		{
+			j=-b;
+			j=chck(j);
+			cout<<j<<"\n";
+			continue;
+		}
+		if((n)%6==0)
+		{
+			j=-c;
+			j=chck(j);
+			cout<<j<<"\n";
+			
+			continue;
+		}
+		
+		
+	}
+} 
