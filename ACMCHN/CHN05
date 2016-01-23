@@ -1,0 +1,32 @@
+https://www.codechef.com/CHN15MOS/problems/CHN05/
+---------------
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+	long long int t,n,m,i,j,k,l;
+	cin>>t;
+	while(t--)
+	{
+		cin>>n>>m;
+		
+		n--;
+		
+		if(n==0)
+		{
+			cout<<"0\n";
+			continue;
+		}
+		
+		if(n==1)
+		{
+			cout<<m<<"\n";
+			continue;
+		}
+		
+		i=n;//for m=1;
+		j=(m-1)*2;
+		i+=j;
+		cout<<i<<"\n";
+	}
+} 
