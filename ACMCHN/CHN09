@@ -1,0 +1,25 @@
+https://www.codechef.com/CHN15MOS/problems/CHN09
+--------------------
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+	long long int t,mn,i,j,k,l;
+	cin>>t;
+	while(t--)
+	{
+		string str;
+		cin>>str;
+		j=l=0;
+		k=str.length();
+		for(i=0;i<k;i++)
+		{
+			if(str[i]=='a')
+			j++;
+			else
+			l++;
+		}
+		mn=min(j,l);
+		cout<<mn<<"\n";
+	}
+} 
