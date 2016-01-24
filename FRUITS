@@ -1,0 +1,24 @@
+
+https://www.codechef.com/COOK66/problems/FRUITS/
+-----------------
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+	
+	long long int t,i,j,k,l,m,n;
+	cin>>t;
+	while(t--)
+	{
+		cin>>i>>j>>k;
+		m=abs(i-j);
+		if(m<=k)
+		{
+			cout<<"0\n";
+		}
+		else
+		cout<<m-k<<"\n";
+	}
+	
+	
+} 
