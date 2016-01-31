@@ -1,0 +1,149 @@
+https://www.codechef.com/IPC15P2A/problems/SATA01/
+--------------------
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+	long long int t,i,j,k,l,m,n,o,p,sum;
+	cin>>t;
+	while(t--)
+	{
+		sum=0;
+		string str;
+		cin>>str;
+		cin>>k;
+		l=str.length();
+		for(i=0;i<l;i++)
+		{
+			j=str[i]-'0';
+			sum+=j;
+		}
+		
+		//cout<<str<<" "<<k<<" "<<sum<<" ";
+		
+		if(k==1){
+		cout<<"YES\n";
+		continue;}
+		if(k==2){
+			p=str[l-1]-'0';
+			if(p%2==0)
+			cout<<"YES\n";
+			else
+			cout<<"NO\n";
+			continue;
+		}
+		
+		if(k==3){
+			if(sum%3==0)
+			cout<<"YES\n";
+			else
+			cout<<"NO\n";
+			continue;
+		}
+		if(k==4){
+			o=str[l-1]-'0';
+			
+			if(l>=2){
+			p=str[l-2]-'0';
+			p=p*10+o;}
+		//	cout<<p;
+			if(p%4==0)
+			cout<<"YES\n";
+			else
+			cout<<"NO\n";
+			continue;
+		}
+		if(k==5){
+			p=str[l-1]-'0';
+			if(p%5==0)
+			cout<<"YES\n";
+			else
+			cout<<"NO\n";
+			continue;
+		}
+		if(k==6){
+			p=str[l-1]-'0';
+			if(p%2==0 && sum%3==0)
+			cout<<"YES\n";
+			else
+			cout<<"NO\n";
+			continue;
+		}
+		if(k==8){
+		
+			o=str[l-1]-'0';
+		
+		
+			if(l>=2){
+			p=str[l-2]-'0';
+			p=p*10+o;}
+		
+			if(l>=3){
+			o=str[l-3]-'0';
+			o=o*100+p;}
+		
+	//	cout<<o;
+		
+			if(o%8==0)
+			cout<<"YES\n";
+			else
+			cout<<"NO\n";
+			continue;
+		}
+		
+		if(k==9){
+			
+			if(sum%9==0)
+			cout<<"YES\n";
+			else
+			cout<<"NO\n";
+			continue;
+		}
+		if(k==10){
+			p=str[l-1]-'0';
+			if(p==0)
+			cout<<"YES\n";
+			else
+			cout<<"NO\n";
+			continue;
+		}
+		
+		if(k==7)
+		{
+			if(str.size()<16){
+			p=0;
+		for(i=0;i<l;i++)
+		{
+			j=str[i]-'0';
+			p=p*10+j;
+		}
+		
+		//cout<<p;
+		
+			if(p%7==0)
+			cout<<"YES\n";
+			else
+			cout<<"NO\n";
+		}
+		
+		else
+		{
+			p=o=0;
+			for(i=0;i<l;i++)
+			{
+				p=str[i]-'0';
+				p=o*10+p;
+				o=p%7;
+				
+			}
+			
+			if(o==0)
+			cout<<"YES\n";
+			else
+			cout<<"NO\n";
+		}
+		
+		
+		}
+	}
+}
