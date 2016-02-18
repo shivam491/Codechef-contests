@@ -1,0 +1,60 @@
+https://www.codechef.com/CRES2016/problems/CRES105/
+---------
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+	long long int g,t,i,j,k,l,m,n,o,p;
+	cin>>t;
+	while(t--)
+	{
+		string str;
+		char c;
+		long int a[26]={0};
+		cin>>str;
+		k=str.length();
+		
+		for(i=0;i<k;i++)
+		{
+			if(str[i]>='A' && str[i]<='Z')
+			{
+				c=str[i];
+				c=tolower(c);
+				str[i]=c;
+			}
+			
+			a[str[i]-'a']++;
+			
+		}
+	//	cout<<str;
+	
+	g=0;
+	
+	for(i=0;i<26;i++)
+	{
+		if(a[i]>0)
+		{
+			if(i%2==0 && a[i]%2==1)
+			{
+				g=1;
+				break;
+			}
+			
+			if(i%2==1 && a[i]%2==0)
+			{
+				g=1;
+				break;
+			}
+			
+		}
+	}
+	
+	if(g==0)
+	cout<<"@1\n";
+	else
+	cout<<"@0\n";
+	
+	
+	
+	}
+} 
