@@ -1,0 +1,40 @@
+https://www.codechef.com/DEAD2016/problems/DL2015A
+-------------
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+	long long int t,i,j,k,l,m,n=1000000,p,q,o,c;
+	cin>>c>>m;
+	long long int a[n];
+	long long int sum=0;
+	a[0]=0,a[1]=1;
+	a[2]=(2%m);
+	
+	sum=2;
+	
+	p=1,q=1;
+	for(i=3;i<n;i++)
+	{
+		j=(((c%m)*(p%m)%m) + (q%m))%m;
+		
+		sum=(sum%m + j%m)%m;
+		
+		a[i]=sum%m;
+		
+		
+		
+		q=p;
+		p=j;
+		
+	//	cout<<a[i]<<" "<<sum<<"\n";
+		
+	}
+	
+	cin>>t;
+	while(t--)
+	{
+		cin>>n;
+		cout<<a[n]<<"\n";
+	}
+} 
