@@ -1,1 +1,52 @@
-
+https://www.codechef.com/DEAD2016/problems/DL2015B/
+------------
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+	long long int t,i,j,k,l,m,n;
+	cin>>t;
+	while(t--)
+	{
+		cin>>n;
+		set<long long int> x;
+		set<long long int> y;
+		
+		x.clear();
+		y.clear();
+		
+		for(i=0;i<n;i++)
+		{
+			cin>>j>>k;
+			
+			if(j>k)
+			continue;
+				
+			l=x.size();
+			x.insert(j);
+			
+			m=x.size();
+			
+			if(l==m)
+			continue;
+			
+			else
+			{
+				l=y.size();
+				y.insert(k);
+				m=y.size();
+				
+				if(l==m)
+				x.erase(j);
+				
+			}
+			
+			
+		}
+		
+		k=x.size();
+		
+		cout<<k<<"\n";
+		
+	}
+} 
